@@ -88,7 +88,8 @@ class _RegisterPageState extends State<RegisterPage> {
                 child: Text(
                   'Log In',
                   style: TextStyle(
-                    color: Theme.of(context).colorScheme.inversePrimary,
+                    color: Colors.blue,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
@@ -101,6 +102,5 @@ class _RegisterPageState extends State<RegisterPage> {
         ),
       ),
     );
-    ;
   }
 }

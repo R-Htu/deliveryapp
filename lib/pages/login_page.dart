@@ -1,10 +1,11 @@
 import 'package:deliveryapp/components/my_button.dart';
 import 'package:deliveryapp/components/my_textfield.dart';
+import 'package:deliveryapp/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
   final void Function()? onTap;
-  LoginPage({super.key, required this.onTap});
+  const LoginPage({super.key, required this.onTap});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -12,14 +13,19 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+  void login() {
+    /* fill out authentication here..
+    */
 
-  TextEditingController passwordController = TextEditingController();
+    //navigate to home page
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => const HomePage()));
+  }
 
   @override
   Widget build(BuildContext context) {
-    var invPrimary = TextStyle(
-        color: Theme.of(context).colorScheme.inversePrimary,
-        fontWeight: FontWeight.bold);
+    var invPrimary = TextStyle(color: Colors.blue, fontWeight: FontWeight.bold);
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: Center(
@@ -63,7 +69,7 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(
               height: 10,
             ),
-            MyButton(text: 'Sign In', onTap: () {}),
+            MyButton(text: 'Sign In', onTap: login),
             const SizedBox(
               height: 25,
             ),
