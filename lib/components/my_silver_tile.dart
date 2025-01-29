@@ -15,9 +15,12 @@ class MySilverTile extends StatelessWidget {
       actions: [IconButton(onPressed: () {}, icon: Icon(Icons.shopping_cart))],
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       foregroundColor: Theme.of(context).colorScheme.inversePrimary,
-      title: Text('Sunset Diner'),
+      title: Text('Blue Water'),
       flexibleSpace: FlexibleSpaceBar(
-        background: child,
+        background: Padding(
+          padding: const EdgeInsets.only(bottom: 50.0),
+          child: child,
+        ),
         title: title,
         centerTitle: true,
         titlePadding: const EdgeInsets.only(left: 0, right: 0, top: 0),
