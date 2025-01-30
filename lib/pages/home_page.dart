@@ -3,6 +3,7 @@ import 'package:deliveryapp/components/my_descripton_box.dart';
 import 'package:deliveryapp/components/my_drawer.dart';
 import 'package:deliveryapp/components/my_silver_tile.dart';
 import 'package:deliveryapp/components/my_tab_bar.dart';
+import 'package:deliveryapp/models/food.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -19,7 +20,8 @@ class _HomePageState extends State<HomePage>
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 3, vsync: this);
+    _tabController =
+        TabController(length: FoodCategory.values.length, vsync: this);
   }
 
   @override
