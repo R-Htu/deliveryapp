@@ -1,6 +1,8 @@
+import 'package:flutter/material.dart';
+
 import 'food.dart';
 
-class Restaurant {
+class Restaurant extends ChangeNotifier {
   //list of food menu
   final List<Food> _menu = [
     //burgers
@@ -106,7 +108,7 @@ class Restaurant {
         name: "Asian Sesame Salad",
         description:
             "Delight in the flavors of the East with this sesame-infused salad. It includes mixed great...",
-        imagePath: "lib/images/salads/asiansesame_salad.jpg",
+        imagePath: "lib/images/salads/asianseame_salad.jpg",
         price: 9.99,
         availableAddons: [
           Addon(name: "Mandarin Oranges", price: 0.99),

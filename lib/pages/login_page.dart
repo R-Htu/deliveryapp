@@ -69,7 +69,18 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(
               height: 10,
             ),
-            MyButton(text: 'Sign In', onTap: login),
+            MyButton(
+              text: 'Sign In',
+              onTap: login,
+              style: TextButton.styleFrom(
+                backgroundColor: const Color.fromARGB(
+                    255, 74, 67, 67), // Or a color of your choice
+                padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30),
+                ),
+              ),
+            ),
             const SizedBox(
               height: 25,
             ),
