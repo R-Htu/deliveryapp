@@ -1,3 +1,4 @@
+import 'package:deliveryapp/pages/cart_page.dart';
 import 'package:flutter/material.dart';
 
 class MySilverTile extends StatelessWidget {
@@ -12,7 +13,15 @@ class MySilverTile extends StatelessWidget {
       collapsedHeight: 120,
       floating: false,
       pinned: true,
-      actions: [IconButton(onPressed: () {}, icon: Icon(Icons.shopping_cart))],
+      actions: [
+        IconButton(
+            onPressed: () {
+              // go to cart  page
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const CartPage()));
+            },
+            icon: Icon(Icons.shopping_cart))
+      ],
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       foregroundColor: Theme.of(context).colorScheme.inversePrimary,
       title: Text('Blue Water'),
