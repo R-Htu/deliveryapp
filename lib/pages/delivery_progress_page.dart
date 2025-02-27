@@ -61,7 +61,7 @@ Widget _buildBottomNavBar(BuildContext context) {
             )
           ],
         ),
-
+        const Spacer(),
         //message button
         Row(
           children: [
@@ -75,9 +75,24 @@ Widget _buildBottomNavBar(BuildContext context) {
                 icon: Icon(Icons.message),
                 color: Theme.of(context).colorScheme.primary,
               ),
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+            // call button
+            Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Theme.of(context).scaffoldBackgroundColor,
+              ),
+              child: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.call),
+                color: Colors.green,
+              ),
             )
           ],
-        )
+        ),
 
         //call button
       ],

@@ -15,6 +15,20 @@ class _RegisterPageState extends State<RegisterPage> {
   final TextEditingController confirmPasswordController =
       TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+
+  //register method
+  void register() async {
+    /* 
+    fill out authetication here...
+     */
+    showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+              backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+              title: const Text("Use wants to register."),
+            ));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,7 +88,7 @@ class _RegisterPageState extends State<RegisterPage> {
             ),
             MyButton(
               text: 'Sign Up ',
-              onTap: () {},
+              onTap: register,
               style: TextButton.styleFrom(
                 backgroundColor: Colors.red, // Or a color of your choice
                 padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
